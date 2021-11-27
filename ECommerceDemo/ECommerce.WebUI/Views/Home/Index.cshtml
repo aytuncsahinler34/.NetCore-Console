@@ -1,0 +1,18 @@
+﻿
+@model IEnumerable<ECommerceDemo.Entities.Product>
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	@foreach(var item in Model) 
+	{
+		<p>@item.Name</p>
+	}
+</body>
+</html>

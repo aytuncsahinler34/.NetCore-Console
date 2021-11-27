@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aytun\\source\\repos\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj": {}
+    "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aytun\\source\\repos\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj": {
+    "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aytun\\source\\repos\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj",
+        "projectUniqueName": "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj",
         "projectName": "ECommerceDemo",
-        "projectPath": "C:\\Users\\aytun\\source\\repos\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj",
+        "projectPath": "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.csproj",
         "packagesPath": "C:\\Users\\aytun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aytun\\source\\repos\\ECommerceDemo\\ECommerceDemo\\obj\\",
+        "outputPath": "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
