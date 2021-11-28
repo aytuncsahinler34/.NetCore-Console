@@ -1,0 +1,4 @@
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Console\obj\Debug\net5.0\ECommerceDemo.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Console\obj\Debug\net5.0\ECommerceDemo.Console.AssemblyInfoInputs.cache
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Console\obj\Debug\net5.0\ECommerceDemo.Console.AssemblyInfo.cs
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Console\obj\Debug\net5.0\ECommerceDemo.Console.csproj.CoreCompileInputs.cache

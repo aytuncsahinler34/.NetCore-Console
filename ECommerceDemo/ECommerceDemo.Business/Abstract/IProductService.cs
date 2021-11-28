@@ -7,8 +7,8 @@ namespace ECommerceDemo.Business.Abstract
 	{
 		Product GetById(int id);
 		List<Product> GetAll();
-		void Create(Product entity);
+		Product Add(Product entity);
+		Product Update(Product entity);
 		void Delete(Product entity);
-		void Update(Product entity);
 	}
 }

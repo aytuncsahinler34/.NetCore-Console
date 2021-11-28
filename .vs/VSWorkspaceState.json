@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ECommerceDemo",
+    "\\ECommerceDemo\\ECommerceDemo.DataAccess",
+    "\\ECommerceDemo\\ECommerceDemo.DataAccess\\Concrete",
+    "\\ECommerceDemo\\ECommerceDemo.DataAccess\\Concrete\\EfCore"
+  ],
+  "SelectedNode": "\\ECommerceDemo\\ECommerceDemo.DataAccess\\Concrete\\EfCore\\EfCoreProductDal.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,4 +1,5 @@
-﻿using ECommerceDemo.Business.Abstract;
+﻿using ECommerceDemo.WebUI.Models;
+using ECommerceDemo.Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerce.WebUI.Controllers
@@ -14,7 +15,9 @@ namespace ECommerce.WebUI.Controllers
 
 		public IActionResult Index() 
 		{
-			return View(_productService.GetAll());
+			return View(new ProductListDto() { 
+			   Products = _productService.GetAll()
+			});
 		}
 	}
 }

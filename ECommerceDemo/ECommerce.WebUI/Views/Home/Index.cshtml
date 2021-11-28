@@ -1,18 +1,10 @@
 ﻿
-@model IEnumerable<ECommerceDemo.Entities.Product>
+@model List<ECommerceDemo.WebUI.Models.ProductListDto>
 @{
 	Layout = null;
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Index</title>
-</head>
-<body>
-	@foreach(var item in Model) 
-	{
-		<p>@item.Name</p>
-	}
-</body>
-</html>
+@foreach(var item in Model) 
+{
+	<p>@item.Products</p>
+}

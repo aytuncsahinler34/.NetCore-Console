@@ -1,3 +1,4 @@
+using ECommerce.WebUI.Middlewares;
 using ECommerceDemo.Business.Abstract;
 using ECommerceDemo.Business.Concrete;
 using ECommerceDemo.DataAccess.Abstract;
@@ -7,10 +8,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ECommerce.WebUI
 {
@@ -42,12 +39,12 @@ namespace ECommerce.WebUI
 
 			app.UseStaticFiles();
 
-			app.UseRouting();
+			//app.CustomStaticFiles();
 
-			app.UseAuthorization();
+			app.UseRouting(); //middleware gelen isteðin rotasý 
 
 			app.UseEndpoints(endpoints => {
-				endpoints.MapRazorPages();
+				endpoints.MapDefaultControllerRoute();
 			});
 		}
 	}
