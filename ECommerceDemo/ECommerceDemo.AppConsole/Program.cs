@@ -1,10 +1,12 @@
 ﻿using ECommerceDemo.Core.Common.ECommerceDemo.Core.Common.Extensions.Primitive;
 using ECommerceDemo.Core.RabbitMQModels;
+using ECommerceDemo.RMQShared;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ECommerceDemo.AppConsole
@@ -48,23 +50,42 @@ namespace ECommerceDemo.AppConsole
 					});
 				});
 
-				var sendToUri = new Uri($"{RabbitMqConsts.RabbitmqUri}/{RabbitMqConsts.Queue}");
-				var endpoint = await bus.GetSendEndpoint(sendToUri);
+				var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));
 
-				await Task.Run(async () => {
-						Message message = new Message {
-							Text = "Publish",
-							OrderInfoModels = new OrderInfoModel() {
-								CustomerAddress = address,
-								CustomerLastName = surname,
-								CustomerName = name,
-								ProductId = productId.AsInt(),
-								Quantity = quantity.AsInt()
-							}
-					};
+				await bus.StartAsync(source.Token);
 
-					await endpoint.Send<Message>(message);
-				});
+				//var sendToUri = new Uri($"{RabbitMqConsts.RabbitmqUri}/{RabbitMqConsts.Queue}");
+				//var endpoint = await bus.GetSendEndpoint(sendToUri);
+				try 
+				{
+					await bus.Publish<IMessage>(new {
+						Text = "Publish",
+						OrderInfoModels = new OrderInfoModel() {
+							CustomerAddress = address,
+							CustomerLastName = surname,
+							CustomerName = name,
+							ProductId = productId.AsInt(),
+							Quantity = quantity.AsInt()
+						}
+					}); 
+				}
+				finally {
+					await bus.StopAsync();
+				}
+				//await Task.Run(async () => {
+				//		Message message = new Message {
+				//			Text = "Publish",
+				//			OrderInfoModels = new OrderInfoModel() {
+				//				CustomerAddress = address,
+				//				CustomerLastName = surname,
+				//				CustomerName = name,
+				//				ProductId = productId.AsInt(),
+				//				Quantity = quantity.AsInt()
+				//			}
+				//	};
+
+				//	await endpoint.Send<IMessage>(message);
+				//});
 				Log.Logger.Information("Application Finish");  //serilog
 				Console.ReadLine();
 			}
@@ -82,7 +103,7 @@ namespace ECommerceDemo.AppConsole
 		}
 	}
 
-	public class Message
+	public class Message : IMessage
 	{
 		public OrderInfoModel OrderInfoModels { get; set; }
 		public string Text { get; set; }

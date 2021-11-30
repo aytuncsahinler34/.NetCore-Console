@@ -7,6 +7,7 @@ using ECommerceDemo.DataAccess.Abstract;
 using ECommerceDemo.DataAccess.Concrete.EfCore;
 using ECommerceDemo.Entities;
 using ECommerceDemo.Entities.Concrete;
+using ECommerceDemo.RMQShared;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,7 +24,7 @@ namespace ECommerceDemo.RMQConsumer
     class Program
 	{
         
-		static async Task Main(string[] args) {
+		static async Task  Main(string[] args) {
             try {
                 var builder = new ConfigurationBuilder();
                 BuildConfig(builder);
@@ -46,8 +47,9 @@ namespace ECommerceDemo.RMQConsumer
 
                 await bus.StartAsync();
                 Log.Logger.Information("Consumer Stop"); //serilog
-                await bus.StopAsync();
                 Console.ReadLine();
+                await bus.StopAsync();
+
             }
 			catch (Exception) {
                 Log.Logger.Error("Application Failed"); //serilog
@@ -62,72 +64,75 @@ namespace ECommerceDemo.RMQConsumer
         }
     }
     
-    public class MessageConsumer : IConsumer<Message>
+    class MessageConsumer : IConsumer<IMessage>
     {
-        public  Task Consume(ConsumeContext<Message> context) 
+        public async Task Consume(ConsumeContext<IMessage> context) 
         {
-            var host = Host.CreateDefaultBuilder()
-                        .ConfigureServices((context, services) => {
-                            services.AddScoped<IProductService, ProductService>();
-                            services.AddScoped<IProductDal, ProductDal>();
-                            services.AddScoped<IOrderService, OrderService>();
-                            services.AddScoped<IOrderDal, OrderDal>();
-                            services.AddScoped<ICustomerService, CustomerService>();
-                            services.AddScoped<ICustomerDal, CustomerDal>();
-                            services.AddScoped<IOrderItemsService, OrderItemsService>();
-                            services.AddScoped<IOrderItemsDal, OrderItemsDal>();
-                        })
-                        .UseSerilog()
-                        .Build();
+            try {
+                Console.WriteLine("Value: {0}", context.Message.Text);
+                var host = Host.CreateDefaultBuilder()
+                            .ConfigureServices((context, services) => {
+                                services.AddScoped<IProductService, ProductService>();
+                                services.AddScoped<IProductDal, ProductDal>();
+                                services.AddScoped<IOrderService, OrderService>();
+                                services.AddScoped<IOrderDal, OrderDal>();
+                                services.AddScoped<ICustomerService, CustomerService>();
+                                services.AddScoped<ICustomerDal, CustomerDal>();
+                                services.AddScoped<IOrderItemsService, OrderItemsService>();
+                                services.AddScoped<IOrderItemsDal, OrderItemsDal>();
+                            })
+                            .UseSerilog()
+                            .Build();
 
-            var customerSvc = ActivatorUtilities.CreateInstance<CustomerService>(host.Services);
-            var orderSvc = ActivatorUtilities.CreateInstance<OrderService>(host.Services);
-            var orderItemsSvc = ActivatorUtilities.CreateInstance<OrderItemsService>(host.Services);
-            var productSvc = ActivatorUtilities.CreateInstance<ProductService>(host.Services);
+                var customerSvc = ActivatorUtilities.CreateInstance<CustomerService>(host.Services);
+                var orderSvc = ActivatorUtilities.CreateInstance<OrderService>(host.Services);
+                var orderItemsSvc = ActivatorUtilities.CreateInstance<OrderItemsService>(host.Services);
+                var productSvc = ActivatorUtilities.CreateInstance<ProductService>(host.Services);
 
-            var message = context.Message;
-            var insertedCustomer = customerSvc.Add(new Customer {
-                FirstName = message.OrderInfoModels.CustomerName,
-                LastName = message.OrderInfoModels.CustomerLastName,
-                Address = message.OrderInfoModels.CustomerAddress,
-                CreatedDate = DateTimeOffset.Now,
-                Creator = 0
-            });
+                var message = context.Message;
+                var insertedCustomer = customerSvc.Add(new Customer {
+                    FirstName = message.OrderInfoModels.CustomerName,
+                    LastName = message.OrderInfoModels.CustomerLastName,
+                    Address = message.OrderInfoModels.CustomerAddress,
+                    CreatedDate = DateTimeOffset.Now,
+                    Creator = 0
+                });
 
-            var insertedOrder = orderSvc.Add(new Order {
-                OrderDate = DateTimeOffset.Now,
-                OrderState = (byte) OrderState.New,
-                CustomerId = insertedCustomer.Id,
-                Customer = insertedCustomer,
-                Quantity = message.OrderInfoModels.Quantity,
-                CreatedDate = DateTimeOffset.Now,
-                Creator = 0
-            });
+                var insertedOrder = orderSvc.Add(new Order {
+                    OrderDate = DateTimeOffset.Now,
+                    OrderState = (byte)OrderState.New,
+                    CustomerId = insertedCustomer.Id,
+                    Quantity = message.OrderInfoModels.Quantity,
+                    CreatedDate = DateTimeOffset.Now,
+                    Creator = 0
+                });
 
-            var productItem = productSvc.GetById(message.OrderInfoModels.ProductId);
+                var productItem = productSvc.GetById(message.OrderInfoModels.ProductId);
 
-            var insertedOrderItems = orderItemsSvc.Add(new  OrderItems {
-                Order = insertedOrder,
-                OrderId = insertedOrder.Id,
-                Product = productItem,
-                ProductId = productItem.Id,
-                CreatedDate = DateTimeOffset.Now,
-                Creator = 0
-            });
+                var insertedOrderItems = orderItemsSvc.Add(new OrderItems {
+                    OrderId = insertedOrder.Id,
+                    ProductId = productItem.Id,
+                    CreatedDate = DateTimeOffset.Now,
+                    Creator = 0
+                });
 
-			var settings = MongoClientSettings.FromConnectionString(MongoDBConsts.MongoDBUri);
-			var client = new MongoClient(settings);
-			var database = client.GetDatabase("ECommerceDB");
-			var collection = database.GetCollection<OrderLogModel>("OrderLogModel");
+                var settings = MongoClientSettings.FromConnectionString(MongoDBConsts.MongoDBUri);
+                var client = new MongoClient(settings);
+                var database = client.GetDatabase("ECommerceDB");
+                var collection = database.GetCollection<OrderLogModel>("OrderLogModel");
 
-			var orderLogModel = new OrderLogModel() {
+                var orderLogModel = new OrderLogModel() {
 
-				_Id = ObjectId.GenerateNewId(),
-				Message = "Sipariş eklendi.",
-				OrderId = insertedOrder.Id
-			};
-			collection.InsertOne(orderLogModel);
-            return context.ConsumeCompleted;
+                    _Id = ObjectId.GenerateNewId(),
+                    Message = "Sipariş eklendi.",
+                    OrderId = insertedOrder.Id
+                };
+                collection.InsertOne(orderLogModel);
+                Console.WriteLine("Value: {0}", context.Message.Text);
+            }
+            catch(Exception ex) {
+                Console.WriteLine("Value: {0}", ex.Message);
+            }
         }
     }
 
@@ -141,13 +146,13 @@ namespace ECommerceDemo.RMQConsumer
     }
     public class MongoDBConsts
     {
-        public const string MongoDBUri = "mongodb+srv://aytuncsahinler:Gs123456@ecommercedemo.pwbe9.mongodb.net/ECommerceDB?retryWrites=true&w=majority";
+        public const string MongoDBUri = "mongodb+srv://aytuncsahinler34:Gs123456@ecommerce.hodwj.mongodb.net/ECommerceDB?retryWrites=true&w=majority";
     }
     public class SeriLogConsts
     {
         public const string SeriLogUri = "http://localhost:5341/";
     }
-    public class Message
+    public class Message : IMessage
     {
         public OrderInfoModel OrderInfoModels { get; set; }
         public string Text { get; set; }

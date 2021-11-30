@@ -134,3 +134,5 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ref\ECommerceDemo.RMQConsumer.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.genruntimeconfig.cache
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.pdb

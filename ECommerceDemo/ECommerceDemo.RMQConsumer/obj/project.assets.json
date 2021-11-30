@@ -2888,6 +2888,19 @@
         "runtime": {
           "bin/placeholder/ECommerceDemo.Entities.dll": {}
         }
+      },
+      "ECommerceDemo.RMQShared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ECommerceDemo.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECommerceDemo.RMQShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerceDemo.RMQShared.dll": {}
+        }
       }
     }
   },
@@ -9292,12 +9305,18 @@
       "type": "project",
       "path": "../ECommerceDemo.Entities/ECommerceDemo.Entities.csproj",
       "msbuildProject": "../ECommerceDemo.Entities/ECommerceDemo.Entities.csproj"
+    },
+    "ECommerceDemo.RMQShared/1.0.0": {
+      "type": "project",
+      "path": "../ECommerceDemo.RMQShared/ECommerceDemo.RMQShared.csproj",
+      "msbuildProject": "../ECommerceDemo.RMQShared/ECommerceDemo.RMQShared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "ECommerceDemo.Business >= 1.0.0",
       "ECommerceDemo.Core >= 1.0.0",
+      "ECommerceDemo.RMQShared >= 1.0.0",
       "MassTransit.RabbitMQ >= 7.2.4",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.12",
       "Microsoft.Extensions.Hosting >= 5.0.0",
@@ -9346,6 +9365,9 @@
             },
             "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Core\\ECommerceDemo.Core.csproj": {
               "projectPath": "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.Core\\ECommerceDemo.Core.csproj"
+            },
+            "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.RMQShared\\ECommerceDemo.RMQShared.csproj": {
+              "projectPath": "C:\\Users\\aytun\\Documents\\GitHub\\ECommerceDemo\\ECommerceDemo\\ECommerceDemo.RMQShared\\ECommerceDemo.RMQShared.csproj"
             }
           }
         }

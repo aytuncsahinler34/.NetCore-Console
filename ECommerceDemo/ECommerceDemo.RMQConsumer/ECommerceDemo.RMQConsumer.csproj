@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ECommerceDemo.Business\ECommerceDemo.Business.csproj" />
     <ProjectReference Include="..\ECommerceDemo.Core\ECommerceDemo.Core.csproj" />
+    <ProjectReference Include="..\ECommerceDemo.RMQShared\ECommerceDemo.RMQShared.csproj" />
   </ItemGroup>
 
 </Project>
