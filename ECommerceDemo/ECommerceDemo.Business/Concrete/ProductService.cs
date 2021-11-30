@@ -1,8 +1,6 @@
 ﻿using ECommerceDemo.Business.Abstract;
 using ECommerceDemo.DataAccess.Abstract;
 using ECommerceDemo.Entities;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,12 +10,7 @@ namespace ECommerceDemo.Business.Concrete
 	{
 		private IProductDal _productDal;
 
-
-		private readonly ILogger<ProductService> _logger;
-		private readonly IConfiguration _config;
-		public ProductService(IProductDal productDal,ILogger<ProductService> logger, IConfiguration config) {
-			_logger = logger;
-			_config = config;
+		public ProductService(IProductDal productDal) {
 			_productDal = productDal;
 		}
 

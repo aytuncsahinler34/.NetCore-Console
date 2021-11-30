@@ -1,4 +1,5 @@
 ﻿using ECommerceDemo.Entities;
+using ECommerceDemo.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECommerceDemo.DataAccess.Concrete.EfCore
@@ -12,11 +13,13 @@ namespace ECommerceDemo.DataAccess.Concrete.EfCore
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) 
 		{
-			modelBuilder.Entity<ProductCategory>().HasKey(x => new { x.CategoryId, x.ProductId });
+			modelBuilder.Entity<OrderItems>().HasKey(x => new { x.OrderId, x.ProductId });
 		}
 
-		public DbSet<Product> Products { get; set; }
-		public DbSet<Category> Categories { get; set; }
+		public DbSet<Customer> Customers { get; set; }
 		public DbSet<Order> Orders { get; set; }
+		public DbSet<OrderItems> OrderItems { get; set; }
+		public DbSet<Product> Products { get; set; }
+
 	}
 }

@@ -1,64 +1,77 @@
-﻿using ECommerceDemo.Business.Abstract;
-using ECommerceDemo.Business.Concrete;
-using ECommerceDemo.Core.MongoModels;
-using ECommerceDemo.DataAccess.Abstract;
-using ECommerceDemo.DataAccess.Concrete.EfCore;
-using ECommerceDemo.Entities;
+﻿using ECommerceDemo.Core.Common.ECommerceDemo.Core.Common.Extensions.Primitive;
+using ECommerceDemo.Core.RabbitMQModels;
+using MassTransit;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using Serilog;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace ECommerceDemo.AppConsole
 {
 	class Program
 	{
-		static void Main(string[] args) {
-			var builder = new ConfigurationBuilder();
-			BuildConfig(builder);
+	   static async Task Main(string[] args) {
 
-			Log.Logger = new LoggerConfiguration()
-            .ReadFrom.Configuration(builder.Build())
-			.Enrich.FromLogContext()
-			.WriteTo.Console()
-			.WriteTo.Seq("http://localhost:5341/")
-			.CreateLogger();
+			try {
 
-			Log.Logger.Information("Application Starting");
-			var host = Host.CreateDefaultBuilder()
-				.ConfigureServices((context, services) => {
-					services.AddScoped<IProductService,ProductService>();
-					services.AddScoped<IProductDal, ProductDal>();
-				})
-				.UseSerilog()
-				.Build();
+				string name,surname,address,quantity,productId;
+				Console.Write("Enter Name: ");
+				name = Console.ReadLine();
+				Console.Write("Enter Surname: ");
+				surname = Console.ReadLine();
+				Console.Write("Address: ");
+				address = Console.ReadLine();
+				Console.Write("Quantity: ");
+				quantity = Console.ReadLine();
+				Console.Write("Product: ");
+				productId = Console.ReadLine();
 
-			var svc = ActivatorUtilities.CreateInstance<ProductService>(host.Services);
-			var insertedOrder = svc.Add(new Product {
-				Name="Test1",
-				ImageUrl="",
-				Price = 50,
-				CreatedDate = DateTimeOffset.Now,
-				Creator = 0
-			});
 
-			var settings = MongoClientSettings.FromConnectionString("mongodb+srv://aytuncsahinler:Gs123456@ecommercedemo.pwbe9.mongodb.net/ECommerceDB?retryWrites=true&w=majority");
-			var client = new MongoClient(settings);
-			var database = client.GetDatabase("ECommerceDB");
-			var collection = database.GetCollection<OrderLogModel>("OrderLogModel");
+				var builder = new ConfigurationBuilder();
+				BuildConfig(builder);
 
-			var orderLogModel = new OrderLogModel() {
+				Log.Logger = new LoggerConfiguration()
+				.ReadFrom.Configuration(builder.Build())
+				.Enrich.FromLogContext()
+				.WriteTo.Seq(SeriLogConsts.SeriLogUri)
+				.CreateLogger();
 
-				_Id = ObjectId.GenerateNewId(),
-				Message = "Sipariş eklendi.",
-				OrderId = insertedOrder.Id
-			};
-			collection.InsertOne(orderLogModel);
-			Console.ReadKey();
+				Log.Logger.Information("Application Starting"); //serilog
+
+				
+
+				var bus = Bus.Factory.CreateUsingRabbitMq(factory => {
+					factory.Host(RabbitMqConsts.RabbitmqUri, configurator => {
+						configurator.Username(RabbitMqConsts.Username);
+						configurator.Password(RabbitMqConsts.Password);
+					});
+				});
+
+				var sendToUri = new Uri($"{RabbitMqConsts.RabbitmqUri}/{RabbitMqConsts.Queue}");
+				var endpoint = await bus.GetSendEndpoint(sendToUri);
+
+				await Task.Run(async () => {
+						Message message = new Message {
+							Text = "Publish",
+							OrderInfoModels = new OrderInfoModel() {
+								CustomerAddress = address,
+								CustomerLastName = surname,
+								CustomerName = name,
+								ProductId = productId.AsInt(),
+								Quantity = quantity.AsInt()
+							}
+					};
+
+					await endpoint.Send<Message>(message);
+				});
+				Log.Logger.Information("Application Finish");  //serilog
+				Console.ReadLine();
+			}
+			catch(Exception) {
+				Log.Logger.Error("Application Failed"); //serilog
+				throw;
+			}
 		}
 
 		static void BuildConfig(IConfigurationBuilder builder) 
@@ -67,5 +80,25 @@ namespace ECommerceDemo.AppConsole
 				.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional:true)
 				.AddEnvironmentVariables();
 		}
+	}
+
+	public class Message
+	{
+		public OrderInfoModel OrderInfoModels { get; set; }
+		public string Text { get; set; }
+	}
+
+	//appsettings.json a da yazılabilirdi.
+	public class RabbitMqConsts
+	{
+		public const string RabbitmqUri = "amqp://guest:guest@localhost:5672";
+		public const string Queue = "test-queue";
+		public const string Username = "guest";
+		public const string Password = "guest";
+	}
+
+	public class SeriLogConsts
+	{
+		public const string SeriLogUri = "http://localhost:5341/";
 	}
 }

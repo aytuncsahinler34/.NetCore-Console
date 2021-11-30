@@ -5,10 +5,15 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.AppConsole.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ref\ECommerceDemo.AppConsole.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.AppConsole.pdb
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Automatonymous.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\DnsClient.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\EntityFramework.SqlServer.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\EntityFramework.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\GreenPipes.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Humanizer.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\MassTransit.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -54,7 +59,10 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\MongoDB.Driver.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\MongoDB.Driver.Core.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\NewId.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Serilog.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
@@ -75,6 +83,7 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\System.Runtime.Caching.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\System.Security.Permissions.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\System.Text.Json.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\System.Windows.Extensions.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
