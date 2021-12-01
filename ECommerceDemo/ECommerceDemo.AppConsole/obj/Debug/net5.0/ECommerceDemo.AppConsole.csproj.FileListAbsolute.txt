@@ -1,3 +1,7 @@
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.deps.json
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.runtimeconfig.json
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.runtimeconfig.dev.json
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.exe
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.AppConsole.exe
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.AppConsole.deps.json
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.AppConsole.runtimeconfig.json
@@ -121,7 +125,11 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.Core.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.DataAccess.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.Entities.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQShared.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.Business.pdb
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.pdb
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQShared.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.Core.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.DataAccess.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.Entities.pdb
@@ -134,12 +142,3 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\obj\Debug\net5.0\ref\ECommerceDemo.AppConsole.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\obj\Debug\net5.0\ECommerceDemo.AppConsole.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\obj\Debug\net5.0\ECommerceDemo.AppConsole.genruntimeconfig.cache
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.deps.json
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.runtimeconfig.json
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.runtimeconfig.dev.json
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.exe
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.dll
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQShared.dll
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQConsumer.pdb
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\bin\Debug\net5.0\ECommerceDemo.RMQShared.pdb
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.AppConsole\obj\Debug\net5.0\ECommerceDemo.AppConsole.csproj.CopyComplete

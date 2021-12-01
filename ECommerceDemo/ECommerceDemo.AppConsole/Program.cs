@@ -54,8 +54,6 @@ namespace ECommerceDemo.AppConsole
 
 				await bus.StartAsync(source.Token);
 
-				//var sendToUri = new Uri($"{RabbitMqConsts.RabbitmqUri}/{RabbitMqConsts.Queue}");
-				//var endpoint = await bus.GetSendEndpoint(sendToUri);
 				try 
 				{
 					await bus.Publish<IMessage>(new {
@@ -72,20 +70,7 @@ namespace ECommerceDemo.AppConsole
 				finally {
 					await bus.StopAsync();
 				}
-				//await Task.Run(async () => {
-				//		Message message = new Message {
-				//			Text = "Publish",
-				//			OrderInfoModels = new OrderInfoModel() {
-				//				CustomerAddress = address,
-				//				CustomerLastName = surname,
-				//				CustomerName = name,
-				//				ProductId = productId.AsInt(),
-				//				Quantity = quantity.AsInt()
-				//			}
-				//	};
-
-				//	await endpoint.Send<IMessage>(message);
-				//});
+				
 				Log.Logger.Information("Application Finish");  //serilog
 				Console.ReadLine();
 			}

@@ -13,7 +13,6 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAc
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.AssemblyInfoInputs.cache
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.AssemblyInfo.cs
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.csproj.CopyComplete
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ref\ECommerceDemo.DataAccess.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.DataAccess\obj\Debug\net5.0\ECommerceDemo.DataAccess.pdb

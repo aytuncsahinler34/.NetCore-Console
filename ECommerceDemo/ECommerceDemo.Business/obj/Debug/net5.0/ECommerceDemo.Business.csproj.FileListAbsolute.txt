@@ -15,7 +15,6 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Busine
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.AssemblyInfoInputs.cache
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.AssemblyInfo.cs
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.csproj.CoreCompileInputs.cache
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.csproj.CopyComplete
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ref\ECommerceDemo.Business.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.Business\obj\Debug\net5.0\ECommerceDemo.Business.pdb

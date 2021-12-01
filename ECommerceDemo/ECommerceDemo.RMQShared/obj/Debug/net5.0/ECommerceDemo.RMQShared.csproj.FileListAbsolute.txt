@@ -9,7 +9,6 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQSha
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.AssemblyInfoInputs.cache
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.AssemblyInfo.cs
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.csproj.CoreCompileInputs.cache
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.csproj.CopyComplete
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ref\ECommerceDemo.RMQShared.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQShared\obj\Debug\net5.0\ECommerceDemo.RMQShared.pdb
