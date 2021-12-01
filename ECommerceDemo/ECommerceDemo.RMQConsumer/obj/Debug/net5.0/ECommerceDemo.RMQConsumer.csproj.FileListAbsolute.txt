@@ -121,8 +121,10 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.Core.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.DataAccess.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.Entities.dll
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.Business.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.Core.pdb
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.DataAccess.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.Entities.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.csproj.AssemblyReference.cache
@@ -130,9 +132,8 @@ C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQCon
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.AssemblyInfoInputs.cache
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.AssemblyInfo.cs
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.csproj.CoreCompileInputs.cache
+C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.csproj.CopyComplete
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ref\ECommerceDemo.RMQConsumer.dll
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.pdb
 C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\obj\Debug\net5.0\ECommerceDemo.RMQConsumer.genruntimeconfig.cache
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.dll
-C:\Users\aytun\Documents\GitHub\ECommerceDemo\ECommerceDemo\ECommerceDemo.RMQConsumer\bin\Debug\net5.0\ECommerceDemo.RMQShared.pdb
